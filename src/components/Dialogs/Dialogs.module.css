@@ -1,0 +1,17 @@
+.dialogs {
+    display: grid;
+
+    grid-template-areas:
+            "di mes";
+    grid-template-columns: 2fr 10fr;
+
+}
+
+.dialogs-items{
+    grid-area: di;
+}
+
+.messages{
+    grid-area: mes;
+
+}
