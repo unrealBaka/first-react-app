@@ -13,5 +13,6 @@
 
 .messages{
     grid-area: mes;
+    border: 5px solid red;
 
 }

@@ -8,7 +8,7 @@ const Dialogs = (props) => {
 
     let dialogsElements = props.state.dialogs.map( dialog => <DialogUsers name={dialog.name} id={dialog.id}/>);
 
-    let messageElements = props.state.messages.map(messageDate => <Message message={messageDate.message}/>);
+    let messageElements = props.state.messages.map(messageDate => <Message message={messageDate.message} type={messageDate.type}/>);
 
     return (
         <div className={dialogStyle.dialogs}>

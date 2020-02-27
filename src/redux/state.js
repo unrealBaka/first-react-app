@@ -10,13 +10,14 @@ let state = {
     },
     messagesPage: {
         messages:  [
-            {id: 1, message: 'Hi'},
-            {id: 2, message: 'How are you?'},
-            {id: 3, message: 'Are you okay?'},
-            {id: 4, message: 'Lalalala'},
-            {id: 5, message: 'LOL'},
-            {id: 6, message: 'Privet pudr'},
-            {id: 7, message: 'No no no!'}
+            {id: 1, message: 'Hi', type:'0'},
+            {id: 2, message: 'How are you?How are you?How are you?How are you?How are you?How are you?How are you?How are you?How are you?How are you?' +
+                    'How are you?How are you?How are you?How are you?',type:'1'},
+            {id: 3, message: 'Are you okay?', type:'0'},
+            {id: 4, message: 'Lalalala', type:'1'},
+            {id: 5, message: 'LOL', type:'0'},
+            {id: 6, message: 'Privet pudr', type:'1'},
+            {id: 7, message: 'No no no!', type:'0'}
         ],
         dialogs:  [
             {id: 1, name: 'Rina'},
