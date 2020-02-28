@@ -12,7 +12,7 @@ const Profile = (props) => {
             <div>
                 Ata + description
             </div>
-           <MyPosts post_bodies={props.state.posts}/>
+           <MyPosts post_bodies={props.state.posts} addPost={props.addPost}/>
         </div>
     );
 }
