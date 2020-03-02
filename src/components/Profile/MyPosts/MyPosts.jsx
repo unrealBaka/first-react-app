@@ -12,16 +12,20 @@ const MyPosts = (props) => {
 
 
     let addPost = () => {
+        props.addPost();
+    };
+
+    let onPostChange = () => {
+        // debugger;
         let text = newPostElement.current.value;
-        props.addPost(text);
-        newPostElement.current.value = null;
+        props.updateNewPost(text);
     };
 
     return (
         <div>
             My Posts
             <div>
-                <textarea ref={newPostElement}></textarea>
+                <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
                 <button onClick={addPost}>Add Post</button>
             </div>
             <div>
