@@ -30,12 +30,14 @@ let state = {
             {id: 5, name: 'Alex'},
             {id: 6, name: 'John'},
             {id: 7, name: 'Egor'}
-        ]
+        ],
+        newMessage: "New message"
     }
 }
 
 window.state = state;
 
+//functions with myProfile and posts
 export let addPost = () => {
     let newPost = {
         id: 5,
@@ -48,8 +50,25 @@ export let addPost = () => {
 };
 
 export let updateNewPostText = (PostText) => {
-    // debugger;
     state.profilePage.newPostText = PostText;
+    reRenderEntireTree(state);
+};
+
+//functions with messages
+
+export let sendMessage = () => {
+    let newMessage = {
+        id: 8,
+        message: state.messagesPage.newMessage,
+        type:'1'
+    };
+    state.messagesPage.messages.push(newMessage);
+    state.messagesPage.newMessage = '';
+    reRenderEntireTree(state);
+};
+
+export let updateNewMessageText = (newMessageText) => {
+    state.messagesPage.newMessage = newMessageText;
     reRenderEntireTree(state);
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import  prof from "./Profile.module.css";
+import prof from "./Profile.module.css";
 import './MyPosts/MyPosts';
 import MyPosts from "./MyPosts/MyPosts";
 
@@ -12,7 +12,8 @@ const Profile = (props) => {
             <div>
                 Ata + description
             </div>
-           <MyPosts post_bodies={props.profilePage.posts} newPostText={props.profilePage.newPostText} updateNewPost={props.updateNewPost} addPost={props.addPost}/>
+            <MyPosts post_bodies={props.profilePage.posts} newPostText={props.profilePage.newPostText}
+                     updateNewPost={props.updateNewPost} addPost={props.addPost}/>
         </div>
     );
 }
