@@ -5,7 +5,7 @@ import messageStyle from "./Message.module.css";
 const Message = (props) => {
 
     //checking message type. Is it my message or not.
-    let my_message =  props.type == 0 ? messageStyle.them : messageStyle.me;
+    let my_message =  props.type === 0 ? messageStyle.them : messageStyle.me;
 
     return (
 

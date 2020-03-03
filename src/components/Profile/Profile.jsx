@@ -13,7 +13,7 @@ const Profile = (props) => {
                 Ata + description
             </div>
             <MyPosts post_bodies={props.profilePage.posts} newPostText={props.profilePage.newPostText}
-                     updateNewPost={props.updateNewPost} addPost={props.addPost}/>
+                     dispatch={props.dispatch}/>
         </div>
     );
 }
