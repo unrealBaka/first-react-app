@@ -2,11 +2,10 @@ import React from "react";
 import dialogStyle from "./Dialogs.module.css";
 import DialogUsers from "./DialogUsers/DialogUsers";
 import Message from "./Message/Message";
+import {sendNewMessage, updateNewMessageText} from "../../redux/state";
 
 
 const Dialogs = (props) => {
-
-
     let dialogsElements = props.state.dialogs.map(dialog => <DialogUsers name={dialog.name} id={dialog.id}/>);
 
     let messageElements = props.state.messages.map(messageDate => <Message message={messageDate.message}
@@ -15,13 +14,13 @@ const Dialogs = (props) => {
     let messageBody = React.createRef();
 
     let sendMessage = () => {
-        props.dispatch({type:'SEND-MESSAGE'});
+        props.dispatch(sendNewMessage());
 
     };
 
     let onMessageChange = () => {
         let text = messageBody.current.value;
-        props.dispatch({type:'UPDATE-NEW-MESSAGE-TEXT', newMessageText: text});
+        props.dispatch(updateNewMessageText(text));
     };
 
 
