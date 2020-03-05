@@ -3,6 +3,7 @@ import myPosts from "./MyPosts.module.css";
 import './Post/Post';
 import Post from "./Post/Post";
 import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profileReducer";
+import StoreContext from "../../../StoreContext";
 
 const MyPosts = (props) => {
 
@@ -22,18 +23,18 @@ const MyPosts = (props) => {
     };
 
     return (
-        <div>
-            My Posts
             <div>
-                <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
-                <button onClick={addPost}>Add Post</button>
+                My Posts
+                <div>
+                    <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+                    <button onClick={addPost}>Add Post</button>
+                </div>
+                <div>
+                    {
+                        postsElements
+                    }
+                </div>
             </div>
-            <div>
-                {
-                    postsElements
-                }
-            </div>
-        </div>
     );
 }
 
