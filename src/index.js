@@ -5,15 +5,18 @@ import store from './redux/redux-store';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {Provider} from "react-redux";
 
 
-let reRenderEntireTree = (state) => {
+let reRenderEntireTree = () => {
 
-    ReactDOM.render(<App state={state} dispatch={store.dispatch.bind(store)} />, document.getElementById('root'));
+    ReactDOM.render(
+        <Provider store={store}>
+            <App/> </Provider>, document.getElementById('root'));
 
 };
 
-reRenderEntireTree(store.getState());
+reRenderEntireTree();
 
 store.subscribe(() => {
     let state = store.getState();
